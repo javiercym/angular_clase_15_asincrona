@@ -1,0 +1,50 @@
+<br>
+<div class="container">
+    <h1>Formulario de registro</h1><br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Carrera</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let dato of persona">
+          <tr>
+            <td>{{ dato.nombre }}</td>
+            <td>{{ dato.apellido }}</td>
+            <td>{{ dato.carrera }}</td>
+            <td><button type="button" class="btn btn-primary" (click)="eliminarPersona()">Eliminar</button></td>
+          </tr>
+        </tbody>
+    </table><br>
+
+
+    <h4>Formulario de registro</h4><br>
+
+    <div class="conten">
+      <div class="row">
+        <div class="col-4">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Nombre</span>
+            <input type="text" [(ngModel)]="persona.nombre" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Apellidos</span>
+            <input type="text" [(ngModel)]="persona.apellido" class="form-control" placeholder="Apellidos" aria-label="Apellidos" aria-describedby="basic-addon1">
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Carrera</span>
+            <input type="text" [(ngModel)]="persona.carrera" class="form-control" placeholder="Carrera" aria-label="Carrera" aria-describedby="basic-addon1">
+          </div>
+          
+          <button type="button" class="btn btn-primary" (click)="agregarPersona()">Guardar</button>
+
+        </div>
+      </div>
+    </div>
+
+</div>
